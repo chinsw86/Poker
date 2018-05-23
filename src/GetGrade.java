@@ -23,6 +23,9 @@ public class GetGrade {
             return 9;
         else if(flush.Flush(player))
             return 7;
+
+        else if(straightFlush.SerialNumberChecking(player))
+            return 6;
         else {
             pairCheck = pair.Pair(player);
             return pairCheck;
