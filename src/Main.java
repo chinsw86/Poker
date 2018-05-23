@@ -39,27 +39,38 @@ public class Main {
 //        Collections.sort(player2, cardAcending);
 
         for(int i=0;i<5;i++){
-//            if(i!=2){
-            cardtest.setCardNumber(i);
-            cardtest.setCardMark("test");
-//            else {
-//                cardtest.setCardNumber(1);
-//                cardtest.setCardMark("test");
-//            }
+            if(i<2) {
+                cardtest.setCardNumber(3);
+                cardtest.setCardMark("test");
+            }
+            else {
+                cardtest.setCardNumber(i+3);
+                cardtest.setCardMark("test");
+            }
+
+//            cardtest.setCardNumber(i+1);
+//            cardtest.setCardMark("test");
 
             test.add(cardtest);
 
             cardtest = new CardData();
         }
 
-        test.get(2).setCardNumber(10);
 
         Collections.sort(test, cardAcending);
 
-        int grade;
-        grade = getGrade.getGrade(test);
+        Pair pair = new Pair();
 
-        System.out.println(grade);
+        List<PairData> pairtest = new ArrayList<>();
+
+        pair.Pair(test);
+
+//        for (PairData pairData:pairtest) {
+//            System.out.println("number : " + pairData.number);
+//            System.out.println("conunt : " + pairData.count1);
+//        }
+
+
 
 
 
